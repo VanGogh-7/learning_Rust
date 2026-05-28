@@ -11,6 +11,8 @@ mod front_of_house {
     }
 }
 
+use crate::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
     crate::front_of_house::hosting::add_to_waitlist();
 }
@@ -31,4 +33,12 @@ fn deliver_order() { }
 pub fn eat_at_restaurant2() {
     let order1 = back_of_house::Appetizer::Soup;
     let order2 = back_of_house::Appetizer::Salad;
+}
+
+mod customer {
+    use crate::front_of_house::hosting;
+
+    pub fn eat_at_restaurant1() {
+        hosting::add_to_waitlist();
+    }
 }
